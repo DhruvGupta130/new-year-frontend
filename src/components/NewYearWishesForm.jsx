@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button, TextField, Typography, CircularProgress, Box, MenuItem, Select, InputLabel, FormControl } from "@mui/material";
 import MyLocationIcon from '@mui/icons-material/MyLocation';
 import axios from "axios";
+import {api} from "../api.js";
 
 const NewYearWishesForm = () => {
     const [name, setName] = useState("");
@@ -94,7 +95,7 @@ const NewYearWishesForm = () => {
         formData.append("file", image);
 
         try {
-            const response = await axios.post(`http://localhost:8080/create`, formData);
+            const response = await axios.post(`${api}/create`, formData);
             if (response.status === 200) {
                 alert("Your Resolution has been created!");
                 setName("");
