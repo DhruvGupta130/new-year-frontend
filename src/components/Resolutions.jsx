@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
-import {Button, CircularProgress} from "@mui/material";
+import {Button} from "@mui/material";
 import ImageCard from "./ImageCard.jsx";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
