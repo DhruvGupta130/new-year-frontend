@@ -1,0 +1,1 @@
+export const api = `https://new-year-43zn.onrender.com`;

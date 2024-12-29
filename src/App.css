@@ -1,0 +1,429 @@
+/* Overall container */
+.home-page-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Greeting Section */
+.greeting-section {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 5px solid white;
+  border-radius: 15px;
+  position: relative;
+  z-index: 10;
+  padding: 50px 20px;
+}
+
+/* Greeting Text */
+.greeting {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
+.greeting-icon {
+  margin-right: 10px;
+  font-size: 3rem;
+}
+
+.subheading {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.share-icon {
+  margin-right: 8px;
+}
+
+/* Fireworks Animation */
+.fireworks-container .firework {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #f9d342;
+  animation: explode 1s infinite;
+}
+
+.firework-1 {
+  animation-delay: 0.3s;
+}
+
+.firework-2 {
+  animation-delay: 0.5s;
+}
+
+.firework-3 {
+  animation-delay: 0.7s;
+}
+
+@keyframes explode {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+/* Snowfall Effect */
+.snowfall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.snowflake {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+  animation: snowfall 12s linear infinite;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+/* Countdown Timer */
+.countdown-container {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  z-index: 10;
+}
+
+.countdown {
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+#countdown {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff7e5f;
+}
+
+/* Background Image */
+.background-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.tripsavvy.com/thmb/v4oeEQTqFWX8x8rToslYUqaHwvk=/3518x2233/filters:fill(auto,1)/GettyImages-501827137-591108c43df78c92837f7505.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+
+.images-box{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.images{
+  width: 25%;
+  right: 50px;
+  position: fixed;
+}
+.image-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+  overflow: hidden;
+  height: fit-content;
+  margin: 50px 20px;
+  border: 5px solid white;
+}
+
+.image-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.image-card-media {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-bottom: 5px solid white;
+}
+
+.image-card-media:hover {
+  transform: scale(1.1);
+}
+
+.image-card-content {
+  text-align: center;
+  background-color: antiquewhite;
+  padding: 12px;
+  height: fit-content;
+  font-size: larger;
+}
+.image-details {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  text-align: left;
+  padding: 40px 20px;
+  margin: 40px;
+  border-radius: 15px;
+  max-width: 55vw;
+  border: 5px solid #fff;
+}
+
+.image-details:hover {
+  transform: scale(1.02);
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  letter-spacing: 2px;
+}
+
+.description {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  line-height: 1.6;
+  text-align: center;
+}
+
+.details-section {
+  padding: 0 50px;
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  font-size: 1rem;
+  margin: 8px 0;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+
+
+@media (max-width: 1068px) {
+
+  .image-card {
+    margin: 10px 0; /* Add vertical spacing */
+  }
+
+  .image-card-media {
+    height: 180px; /* Reduce height for smaller screens */
+  }
+
+  .image-details {
+    padding: 30px; /* Reduce padding */
+    margin: 20px; /* Adjust margin */
+  }
+
+  .title {
+    font-size: 2.5rem; /* Reduce title size */
+  }
+
+  .description {
+    font-size: 1.2rem; /* Adjust description font size */
+  }
+}
+
+/* Adjust layout for tablets and small devices */
+@media (max-width: 768px) {
+  .images-box {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Make items stretch to fit the container */
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .images {
+    position: static; /* Remove fixed position on small screens */
+    width: 80%;
+  }
+  .image-card {
+    height: fit-content;
+  }
+  .image-details {
+    padding: 20px;
+    margin: 20px;
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 2.5rem; /* Reduce title size */
+    margin: 0;
+  }
+
+  .description {
+    padding: 20px;
+  }
+}
+
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.container {
+  border-radius: 16px;
+  width: 500px;
+  border: 3px solid white;
+  padding: 30px;
+}
+
+.form-container:hover {
+  transform: scale(1.01);
+}
+
+/* Title style */
+.title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Input fields */
+.input {
+  background-color: #333; /* Dark input background */
+  color: #fff;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.input .MuiInputLabel-root {
+  color: #bbb; /* Lighter label color */
+}
+
+.input .MuiInputBase-root {
+  border-radius: 8px;
+  border-color: #444; /* Subtle border color */
+}
+
+.input .MuiOutlinedInput-root fieldset {
+  border-color: #444; /* Dark border */
+}
+
+.input .MuiOutlinedInput-root:hover fieldset {
+  border-color: #6200ea; /* Highlight border on focus */
+}
+
+
+/* Location input field */
+.location-input {
+  background-color: #333; /* Dark input background */
+  color: #fff;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+/* Helper text style */
+.helper-text {
+  color: #bbb; /* Lighter helper text */
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 2rem; /* Smaller title on mobile */
+  }
+
+  .button {
+    font-size: 0.9rem; /* Smaller button on mobile */
+  }
+}
+
+.empty-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  gap: 20px;
+}
+
+
+/* Error Message */
+.error-message {
+  color: #d32f2f; /* MUI error color */
+  font-size: 1.25rem; /* Matches MUI helper text size */
+  margin: 8px 0; /* Consistent spacing */
+  text-align: center;
+}
+
+/* Loader */
+.loader {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(0, 0, 0, 0.1); /* Subtle gray background */
+  border-top: 3px solid #1976d2; /* MUI primary color */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: auto; /* Centers horizontally */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
